@@ -1,0 +1,53 @@
+
+[bar/base]
+bottom = false
+
+offset-y = 10
+
+width = 100%
+height = 35
+
+background = ${colors.bar-background}
+foreground = ${colors.bar-foreground}
+;radius = 20
+
+border-size = 3
+border-color = ${colors.border}
+
+
+[bar/left]
+inherit = bar/base
+background = ${colors.left-background}
+
+width = 30%
+offset-x = 1%
+
+modules-center = pulseaudio
+
+
+[bar/middle]
+inherit = bar/base
+background = ${colors.middle-background}
+
+width = 30%
+offset-x = 35%
+
+modules-center = date
+
+
+[bar/right]
+inherit = bar/base
+background = ${colors.right-background}
+
+width = 30%
+offset-x = 69%
+
+modules-center = battery
+
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+include-file = ~/.config/polybar/modules
+include-file = ~/.config/polybar/colors

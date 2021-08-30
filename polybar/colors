@@ -1,0 +1,15 @@
+[colors]
+bar-background = #fff
+bar-foreground = #000
+
+border = #263D58
+
+left-background = #AB4D56
+left-foreground = #000
+
+middle-background = #956EA1
+middle-foreground = #000
+
+;right-background = #557EA2
+right-background = #6992B6
+right-foreground = #000

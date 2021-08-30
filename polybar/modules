@@ -1,0 +1,66 @@
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+date = %a, %e %B
+time = %H:%M
+
+format = <label>
+
+label = %date% %time%
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+use-ui-max = true
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+format-muted = <label-muted>
+
+label-volume = %percentage%%
+label-muted = shhhhh!
+
+ramp-volume-0 = 🔈
+ramp-volume-1 = 🔉
+ramp-volume-2 = 🔊
+
+click-right = pavucontrol
+
+
+[module/battery]
+type = internal/battery
+
+full-at = 99
+
+battery = BAT0
+adapter = ADP0
+
+poll-interval = 5
+
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+
+label-charging = Charging %percentage%%
+label-discharging = %percentage%%
+
+
+[module/network]
+type = internal/network
+interface = wlan0
+
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = %essid%
+
+label-disconnected = No Signal
+
+;ramp-signal-0 = f
+;ramp-signal-1 = d
+
+
